@@ -27,10 +27,10 @@ function setCookie(name, value, expires, path) {
 
 		date.setTime(date.getTime() + (expires * 24 * 60 * 60 * 1000));
 
-		const expires = 'expires=' + date.toUTCString();
+		const expiresString = `expires=${date.toUTCString()}`;
 		const max = `max-age=${expires * 86400}`;
 
-		cookie = `${cookie}; ${expires}; ${max}`;
+		cookie = `${cookie}; ${expiresString}; ${max}`;
 
 	}
 
